@@ -1,4 +1,5 @@
 # require libraries/modules here
+require 'open-uri'
 require "nokogiri"
 require "pry"
 
