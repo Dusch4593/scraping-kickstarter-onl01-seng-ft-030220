@@ -17,7 +17,8 @@ def create_project_hash
     #binding.pry
     project_hash[title.to_sym] = {
       :image_link => project.css("div.project-thumbnail a img").attribute("src").value, 
-      :description => project.css("p.bbcard_blurb").text.strip
+      :description => project.css("p.bbcard_blurb").text.strip, 
+      :location => 
     }
   end
   
@@ -32,5 +33,7 @@ create_project_hash
 
 # description: project.css("p.bbcard_blurb").text.strip
 
-# url: project.css("div.project-thumbnail a img").attribute("src).value
+# image_link: project.css("div.project-thumbnail a img").attribute("src).value
+
+# location: 
 
