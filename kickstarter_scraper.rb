@@ -16,7 +16,8 @@ def create_project_hash
     title = project.css("h2.bbcard_name strong a").text.strip
     binding.pry
     project_hash[title.to_sym] = {
-      :image_link => project.css("div.project-thumbnail a img").attribute("src").value
+      image_link => project.css("div.project-thumbnail a img").attribute("src").value, 
+      
     }
   end
   
@@ -28,6 +29,8 @@ create_project_hash
 # projects: kickstarter.css("li.project.grid_4")
 
 # title: project.css("h2.bbcard_name strong a").text
+
+# description: project.css("p.bbcard_blurb").text.strip
 
 # url: project.css("div.project-thumbnail a img").attribute("src).value
 
